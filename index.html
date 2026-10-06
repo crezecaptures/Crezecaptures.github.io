@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/jpeg" href="assets/creze-captures-logo.jpg">
+<meta name="description" content="Creze Captures — photo editing, poster editing, audio editing, video editing, photography and videography.">
+<title>Creze Captures — Creative Studio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+:root{--bg:#050505;--card:rgba(255,255,255,.075);--line:rgba(255,255,255,.15);--text:#f7f7f4;--muted:#a8a8a4;--gold:#ffd21a;--max:1180px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:radial-gradient(circle at 75% 5%,rgba(255,210,26,.08),transparent 28%),radial-gradient(circle at 15% 80%,rgba(120,100,255,.09),transparent 30%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.55;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.025) 50%,transparent 75%);z-index:-1}
+a{color:inherit;text-decoration:none}.container{width:min(calc(100% - 32px),var(--max));margin:auto}
+nav{position:fixed;z-index:20;top:14px;left:50%;transform:translateX(-50%);width:min(calc(100% - 24px),1000px);border:1px solid var(--line);background:rgba(5,5,5,.62);backdrop-filter:blur(24px);border-radius:20px;padding:8px 10px;box-shadow:0 18px 60px rgba(0,0,0,.4)}
+.navin{display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-family:Manrope;font-weight:800;letter-spacing:-.04em}.brand img{width:42px;height:42px;object-fit:cover;border-radius:11px}.brand b{color:var(--gold)}.links{display:flex;gap:4px}.links a{padding:9px 12px;border-radius:12px;color:#cfcfca;font-size:14px}.links a:hover{background:rgba(255,255,255,.08);color:#fff}.menu{display:none;background:none;border:0;color:white;font-size:22px}
+.hero{min-height:100vh;display:grid;align-items:center;padding:145px 0 90px}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center}.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:999px;padding:8px 12px;text-transform:uppercase;letter-spacing:.14em;font-size:11px;color:#d5d5d1}.dot{width:7px;height:7px;background:var(--gold);border-radius:50%;box-shadow:0 0 18px var(--gold)}
+h1,h2,h3{font-family:Manrope}h1{font-size:clamp(56px,8vw,104px);line-height:.91;letter-spacing:-.075em;margin:23px 0}h1 span{color:var(--gold)}.hero p{color:var(--muted);font-size:18px;max-width:590px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:15px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.25s}.btn:hover{transform:translateY(-3px)}.primary{background:#fff;color:#070707;border-color:#fff}.gold{background:var(--gold);color:#080808;border-color:var(--gold)}
+.hero-card{min-height:500px;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.025));position:relative;overflow:hidden;box-shadow:inset 0 1px rgba(255,255,255,.15),0 35px 100px rgba(0,0,0,.5)}
+.hero-card:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-100px;top:-80px;background:radial-gradient(circle at 35% 30%,#fff 0,#ffe16a 8%,#ffc400 25%,transparent 68%);filter:blur(3px);opacity:.8}.hero-card:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;left:-130px;bottom:-100px;background:radial-gradient(circle,#6e56ff,#19b9ff 35%,transparent 70%);opacity:.5;filter:blur(10px)}
+.glass{position:absolute;inset:15%;border:1px solid rgba(255,255,255,.28);border-radius:45% 55% 60% 40%/50% 42% 58% 50%;background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.025));backdrop-filter:blur(20px);transform:rotate(-9deg);box-shadow:inset 0 2px 20px rgba(255,255,255,.18),0 30px 80px rgba(0,0,0,.35)}.hero-card .caption{position:absolute;bottom:24px;left:25px;z-index:2;font-family:Manrope;font-weight:800;letter-spacing:.05em}
+section{padding:95px 0}.head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}.eyebrow{font-size:11px;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:800}h2{font-size:clamp(38px,5vw,62px);line-height:1;letter-spacing:-.06em;margin-top:9px}.head p{max-width:420px;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.service,.price{border:1px solid var(--line);border-radius:24px;background:var(--card);backdrop-filter:blur(18px);padding:25px;transition:.3s}.service:hover,.price:hover{transform:translateY(-5px);background:rgba(255,255,255,.09)}.service .ico{font-size:26px;margin-bottom:62px}.service h3{font-size:19px;margin-bottom:8px}.service p{font-size:14px;color:var(--muted)}
+.work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:13px}.work{height:310px;border-radius:24px;border:1px solid var(--line);overflow:hidden;position:relative;background:#111}.work:nth-child(1){grid-column:span 7}.work:nth-child(2){grid-column:span 5}.work:nth-child(3){grid-column:span 5}.work:nth-child(4){grid-column:span 7}.visual{position:absolute;inset:0;transition:.5s;background-size:cover;background-position:center}.work:hover .visual{transform:scale(1.05)}.v1{background:radial-gradient(circle at 70% 30%,#fff6b5,#7d70ff 28%,#15121e 65%)}.v2{background:linear-gradient(140deg,#e9dfd1,#6f5d4b 35%,#111 70%)}.v3{background:radial-gradient(circle at 30% 35%,#a8eaff,#2b4c7c 32%,#090c14 70%)}.v4{background:linear-gradient(125deg,#ffe1bd,#b75e3f 35%,#1b1110 70%)}.work:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.84))}.winfo{position:absolute;z-index:2;left:20px;right:20px;bottom:18px;display:flex;justify-content:space-between;align-items:end}.winfo small{color:#bbb;font-size:10px;text-transform:uppercase;letter-spacing:.14em}.winfo strong{display:block;font-family:Manrope;font-size:21px;margin-top:4px}
+.upload-box{margin-top:18px;padding:20px;border:1px dashed rgba(255,255,255,.22);border-radius:22px;background:rgba(255,255,255,.035)}.upload-box label{display:inline-flex;cursor:pointer}.upload-box input{display:none}.upload-note{color:var(--muted);font-size:12px;margin-top:9px}.uploads{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}.uploads .item{height:170px;border-radius:18px;overflow:hidden;border:1px solid var(--line);position:relative;background:#111}.uploads img{width:100%;height:100%;object-fit:cover}.remove{position:absolute;top:8px;right:8px;border:0;background:rgba(0,0,0,.65);color:#fff;border-radius:50%;width:30px;height:30px;cursor:pointer}
+.prices{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.price{min-height:390px}.price.featured{border-color:rgba(255,210,26,.48);box-shadow:0 0 60px rgba(255,210,26,.055)}.price h3{font-size:17px;color:#d7d7d2}.amount{font-family:Manrope;font-size:44px;letter-spacing:-.06em;margin:5px 0 18px}.checks{list-style:none;border-top:1px solid var(--line);padding-top:13px}.checks li{font-size:13px;color:#d0d0cb;padding:7px 0}.checks li:before{content:"✓";color:var(--gold);margin-right:9px}.price .btn{width:100%;margin-top:22px}
+.contact{border:1px solid var(--line);border-radius:32px;padding:52px;background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.025));display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{max-width:700px}
+footer{padding:35px 0;color:#888;border-top:1px solid rgba(255,255,255,.08);font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px}.reveal{opacity:0;transform:translateY(20px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-card{min-height:390px}.services,.prices{grid-template-columns:1fr 1fr}.uploads{grid-template-columns:1fr 1fr}.work:nth-child(n){grid-column:span 12;height:260px}.head{display:block}.head p{margin-top:14px}}
+@media(max-width:650px){.links{display:none}.menu{display:block}.links.open{display:flex;position:absolute;left:0;right:0;top:59px;flex-direction:column;background:rgba(8,8,8,.94);border:1px solid var(--line);border-radius:16px;padding:8px}.hero{padding-top:130px}.hero-card{min-height:330px}.services,.prices,.uploads{grid-template-columns:1fr}.service{min-height:200px}.service .ico{margin-bottom:45px}.contact{display:block;padding:34px}.contact .btn{margin-top:24px}.foot{display:block}.foot div+div{margin-top:8px}}
+
+.brand img{width:58px;height:58px;object-fit:contain;border-radius:10px;background:#000}
+.brand-text{display:inline}
+.logo-hero{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-53%);width:min(72%,430px);padding:18px;border-radius:28px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.45);backdrop-filter:blur(16px);box-shadow:0 25px 70px rgba(0,0,0,.5)}
+.logo-hero img{display:block;width:100%;height:auto;max-height:350px;object-fit:contain;border-radius:16px}
+</style>
+</head>
+<body>
+<nav><div class="navin">
+  <a class="brand" href="#top"><img src="assets/creze-captures-logo.jpg" alt="Creze Captures logo"><span class="brand-text">CREZE <b>CAPTURES</b></span></a>
+  <div class="links" id="links"><a href="#services">Services</a><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
+  <button class="menu" id="menu">☰</button>
+</div></nav>
+
+<main id="top">
+<section class="hero"><div class="container hero-grid">
+  <div class="reveal"><div class="pill"><span class="dot"></span> Freelance creative studio</div>
+    <h1>Small captures.<br><span>Big impact.</span></h1>
+    <p>Photo editing, poster design, audio editing, video editing, photography and videography — crafted to make your content stand out.</p>
+    <div class="actions"><a class="btn primary" href="#work">View my work ↗</a><a class="btn gold" href="https://wa.me/917736438867">WhatsApp me</a></div>
+  </div>
+  <div class="hero-card reveal">
+  <div class="logo-hero"><img src="assets/creze-captures-logo.jpg" alt="Creze Captures — Small captures to വലിയ ഓർമ്മകൾ"></div>
+  <div class="glass"></div>
+  <div class="caption">CREZE CAPTURES / VISUAL STUDIO</div>
+</div>
+</div></section>
+
+<section id="services"><div class="container">
+<div class="head reveal"><div><div class="eyebrow">Services</div><h2>Creative work,<br>made simple.</h2></div><p>Choose a service or message me for a custom project. Every package can be adjusted to your needs.</p></div>
+<div class="services">
+<article class="service reveal"><div class="ico">✦</div><h3>Photo Editing</h3><p>Color correction, crop & resize, retouching and polished final exports.</p></article>
+<article class="service reveal"><div class="ico">▱</div><h3>Poster Editing</h3><p>Custom layouts, typography styling, image integration and social-media sizes.</p></article>
+<article class="service reveal"><div class="ico">◌</div><h3>Audio Editing</h3><p>Noise reduction, volume equalization, fades, transitions and basic mixing.</p></article>
+<article class="service reveal"><div class="ico">▶</div><h3>Video Editing</h3><p>Cutting, transitions, background music, text overlays and standard exports.</p></article>
+</div></div></section>
+
+<section id="work"><div class="container">
+<div class="head reveal"><div><div class="eyebrow">Portfolio</div><h2>Your work,<br>front and center.</h2></div><p>Use the uploader below to preview your own portfolio images on this device.</p></div>
+<div class="work-grid" id="defaultWork">
+<a class="work reveal" href="#"><div class="visual v1"></div><div class="winfo"><div><small>Photo Editing</small><strong>Portrait Retouch</strong></div><span>↗</span></div></a>
+<a class="work reveal" href="#"><div class="visual v2"></div><div class="winfo"><div><small>Photography</small><strong>Editorial Portrait</strong></div><span>↗</span></div></a>
+<a class="work reveal" href="#"><div class="visual v3"></div><div class="winfo"><div><small>Videography</small><strong>Visual Story</strong></div><span>↗</span></div></a>
+<a class="work reveal" href="#"><div class="visual v4"></div><div class="winfo"><div><small>Design</small><strong>Brand Brochure</strong></div><span>↗</span></div></a>
+</div>
+<div class="upload-box reveal">
+<label class="btn gold" for="portfolioInput">＋ Upload your portfolio images</label>
+<input id="portfolioInput" type="file" accept="image/*" multiple>
+<div class="upload-note">Images are previewed and saved only in this browser using local storage. They are not uploaded to a server.</div>
+<div class="uploads" id="uploads"></div>
+</div>
+</div></section>
+
+<section id="pricing"><div class="container">
+<div class="head reveal"><div><div class="eyebrow">Pricing</div><h2>Clear prices.<br>No confusion.</h2></div><p>These are your supplied Version 2 rates. Contact me if you need a custom package.</p></div>
+<div class="prices">
+<article class="price featured reveal"><h3>Photo Editing</h3><div class="amount">₹60</div><ul class="checks"><li>Basic color correction</li><li>Crop & Resize</li><li>Retouching (one subject)</li><li>1 Round of Revisions</li><li>Quick delivery</li></ul><a class="btn primary" href="https://wa.me/917736438867?text=Hi%20Creze%20Captures%2C%20I%20want%20Photo%20Editing">Get Started</a></article>
+<article class="price reveal"><h3>Poster Editing</h3><div class="amount">₹50</div><ul class="checks"><li>Custom layout design</li><li>Typography styling</li><li>Image integration</li><li>1 Design Concept</li><li>Social media sized</li></ul><a class="btn" href="https://wa.me/917736438867?text=Hi%20Creze%20Captures%2C%20I%20want%20Poster%20Editing">Get Started</a></article>
+<article class="price reveal"><h3>Audio Editing</h3><div class="amount">₹100</div><ul class="checks"><li>Noise reduction</li><li>Volume equalization</li><li>Fades & Transitions</li><li>Basic mixing</li><li>Standard formats</li></ul><a class="btn" href="https://wa.me/917736438867?text=Hi%20Creze%20Captures%2C%20I%20want%20Audio%20Editing">Get Started</a></article>
+<article class="price reveal"><h3>Video Editing</h3><div class="amount">₹200</div><ul class="checks"><li>Basic cutting & splicing</li><li>Transition effects</li><li>Background music track</li><li>Text overlays</li><li>Standard quality output</li></ul><a class="btn" href="https://wa.me/917736438867?text=Hi%20Creze%20Captures%2C%20I%20want%20Video%20Editing">Get Started</a></article>
+</div></div></section>
+
+<section id="contact"><div class="container"><div class="contact reveal"><div><div class="eyebrow">Start a project</div><h2>Have something in mind? Let's make it look great.</h2></div><div class="actions"><a class="btn gold" href="https://wa.me/917736438867">WhatsApp</a><a class="btn" href="tel:+917736438867">Call</a></div></div></div></section>
+</main>
+<footer><div class="container foot"><div>© 2026 Creze Captures. All rights reserved.</div><div>Photo • Video • Editing • Design</div></div></footer>
+
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.onclick=()=>links.classList.toggle('open');
+document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+
+const key='crezePortfolioV1', input=document.getElementById('portfolioInput'), uploads=document.getElementById('uploads');
+let saved=JSON.parse(localStorage.getItem(key)||'[]');
+function render(){
+ uploads.innerHTML='';
+ saved.forEach((src,i)=>{
+  const d=document.createElement('div');d.className='item';
+  d.innerHTML=`<img src="${src}" alt="Portfolio image"><button class="remove" aria-label="Remove">×</button>`;
+  d.querySelector('button').onclick=()=>{saved.splice(i,1);localStorage.setItem(key,JSON.stringify(saved));render()};
+  uploads.appendChild(d);
+ });
+}
+input.onchange=()=>{
+ [...input.files].forEach(file=>{
+  const r=new FileReader();r.onload=e=>{saved.push(e.target.result);localStorage.setItem(key,JSON.stringify(saved));render()};r.readAsDataURL(file);
+ });
+ input.value='';
+};
+render();
+
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+</script>
+</body>
+</html>
